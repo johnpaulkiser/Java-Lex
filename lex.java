@@ -4,10 +4,13 @@ import java.io.*;
 public class lex{
 
     public static void main(String[] args) throws IOException {
-        Scanner scanf = new Scanner(new File("input.txt"));
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Input file name:");
+        Scanner scanf = new Scanner(new File(scan.nextLine()));
         int lineNum = 1;
         String operators = "()+=-*/,;";
-
+        
+        
         while (scanf.hasNextLine()){
             String line = scanf.nextLine();
 
