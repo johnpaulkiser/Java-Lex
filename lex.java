@@ -50,7 +50,7 @@ public class lex{
         int end = 0;
 
 
-        // loop from first letter until hitting neither a digit or letter
+        // loop from first letter until hitting neither a digit nor letter
         for (int i = pos; i < line.length(); i++) {
             if (!Character.isLetter(line.charAt(i)) && !Character.isDigit(line.charAt(i))) {
                 end = i;
