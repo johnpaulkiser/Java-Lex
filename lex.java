@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class lex{
+public class lex {
 
     public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(System.in);
@@ -11,7 +11,7 @@ public class lex{
         String operators = "()+=-*/,;";
         
         
-        while (scanf.hasNextLine()){
+        while (scanf.hasNextLine()) {
             String line = scanf.nextLine();
 
             for (int i = 0; i < line.length(); i++) {
@@ -22,7 +22,7 @@ public class lex{
                     if (i == -1) break;
                 
                 // check for operators
-                } else if (operators.contains(Character.toString(line.charAt(i)))){ 
+                } else if (operators.contains(Character.toString(line.charAt(i)))) { 
                     String op = Character.toString(line.charAt(i));
                     System.out.println(String.format("Line %d: %d operator: %s", lineNum, i+1, op));
                    
@@ -32,12 +32,12 @@ public class lex{
                     if (i == -1) break; 
                     
                 // check for strings
-                } else if (line.charAt(i) == '"'){ 
+                } else if (line.charAt(i) == '"') { 
                     i = handleString(i, lineNum, line);
                     if (i == -1) break;
                     
                 // check for errors
-                } else if (!(line.charAt(i) == ' ')){ 
+                } else if (!(line.charAt(i) == ' ')) { 
                     String err = Character.toString(line.charAt(i));
                     System.out.println(String.format("Line %d: %d error: %s, not recognized", lineNum, i+1, err));
                 }
