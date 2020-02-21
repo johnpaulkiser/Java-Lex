@@ -68,7 +68,7 @@ public class lex {
         }
 
         // check if lexeme is a keyword
-        for(String word : keywords) {
+        for (String word : keywords) {
             if (word.equals(lexeme)) {
                 System.out.println(String.format("Line %d: %d keyword: %s", lineNum, pos, lexeme));
                 return end-1;
