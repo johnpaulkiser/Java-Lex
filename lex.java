@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class lex {
+public class Lex {
 
     public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(System.in);
