@@ -99,7 +99,7 @@ class Parse {
                         toAdd = grammar.get(rule).get(0); // get the lefthand side of the rule
                         stack.push(toAdd);
                         //GOTO
-                        System.out.println(String.format("GOTO[%d, %s]", peaked, toAdd));
+                        System.out.println(String.format(" GOTO[%d, %s]", peaked, toAdd));
                         stack.push(table[peaked][columns.get(toAdd)]);
                         break;
                     }
